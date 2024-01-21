@@ -29,7 +29,7 @@ function purchase(eth){
   
     var updatedNumber =  storedNumber - eth;
     localStorage.setItem('displayedNumber', updatedNumber);
-    localStorage.setItem('ownednft', updateownednft);
+   
     displayNum.textContent = 'Your Balance: ' + updatedNumber.toFixed(2) + ' ETH';
   
   
