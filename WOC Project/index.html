@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+
+<body>
+
+    <main>
+        <nav>
+            <span class="logo"><img id="logo" src="assets/Logo and name/Logo - Copy.png" alt="abs" height="45"></span>
+
+            <span class="name">
+                BlockAuthentic
+            </span>
+        </nav>
+        <div class="top">
+
+            <form id="loginForm">
+                
+                <h2>Login</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+
+                <p class="switch-form">Don't have an account? <a href="register.html">Register</a></p>
+            </form>
+
+
+
+
+        </div>
+        <div class=" bottom">
+            <img src="assets/login.page.images/analytics-3088958_1280.webp" alt="image">
+            <div class="tagline">
+                Elevating Digital Ownership
+            </div>
+            <div class="about">
+                At Block Authentic, we are pioneers in establishing trust and authenticity within the fast-evolving
+                world of blockchain and NFTs. Our platform is designed to empower creators, collectors, and enthusiasts
+                by providing a secure and transparent environment for the creation, trade, and ownership of digital
+                assets.
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <span class="help">
+            <ul>Help
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </span>
+        <span class="company">
+            <ul> Company
+                <li><a href="#">About</a></li>
+                <li><a href="#">Mission $ Team</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+
+
+        </span>
+        <span class="follow">
+            <ul>Follow Us
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </span>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>
