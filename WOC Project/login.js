@@ -26,12 +26,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 function purchase(eth){
     var displayNum = document.getElementById('displayNum');
     
-  var updateownednft = ownednft + 1 ;
+  
     var updatedNumber =  storedNumber - eth;
     localStorage.setItem('displayedNumber', updatedNumber);
     localStorage.setItem('ownednft', updateownednft);
     displayNum.textContent = 'Your Balance: ' + updatedNumber.toFixed(2) + ' ETH';
-  ownednft.textContent = 'Owned NFT: ' + updateownednft ;
+  
   
   }
   
