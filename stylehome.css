@@ -252,7 +252,49 @@ background-color: rgba(27, 26, 26, 0.718);
     background-color: bisque;
 }
 
+/* Improved Search Bar Styles */
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 40px 0;
+}
 
+#searchInput {
+  width: 40vw;
+  max-width: 400px;
+  padding: 12px 40px 12px 16px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  border: 1.5px solid #4e8cff;
+  outline: none;
+  background: #181f2a;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(78, 140, 255, 0.08);
+  transition: border 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+#searchInput:focus {
+  border: 2px solid #1e90ff;
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.15);
+}
+
+/* Optional: Add a search icon inside the input */
+.search-container {
+  position: relative;
+}
+
+.search-container::before {
+  content: '🔍';
+  position: absolute;
+  left: calc(50% - 180px);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #4e8cff;
+  pointer-events: none;
+}
 
 
 

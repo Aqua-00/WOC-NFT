@@ -31,6 +31,10 @@
             </span>
 
         </nav>
+        <!-- Add after <nav> -->
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search NFTs by name...">
+</div>
         <div class="bg-box">
             <div class="category-box">
                 <div class="box content">
@@ -75,8 +79,8 @@
 
         <div class="latest-drop">
             <span>Latest Drops</span>
-            <div class="one"><a href="nft1.html"><img src="assets/NFT/nft  (1).jpeg" alt="1"></a>
-                <div class="artname">NFT 1</div>
+            <div  class="nft-card one"><a href="nft1.html"><img src="assets/NFT/nft  (1).jpeg" alt="1"></a>
+                <div class="nft-title">NFT 1</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -92,8 +96,8 @@
 
             </div>
 
-            <div class="two"><a href="art3.html"><img src="assets/login.page.images/bg img (2).jpg" alt="2"></a>
-                <div class="artname">Art 3</div>
+            <div  class="nft-card two"><a href="art3.html"><img src="assets/login.page.images/bg img (2).jpg" alt="2"></a>
+                <div class="nft-title">Art 3</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -108,8 +112,8 @@
                 </div>
             </div>
 
-            <div class="three"><a href="nft2.html"><img src="assets/NFT/nft  (3).jpeg" alt="3"></a>
-                <div class="artname">NFT 2</div>
+            <div  class="nft-card three"><a href="nft2.html"><img src="assets/NFT/nft  (3).jpeg" alt="3"></a>
+                <div class="nft-title">NFT 2</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -123,8 +127,8 @@
 
                 </div>
             </div>
-            <div class="four"><a href="nft3.html"><img src="assets/login.page.images/bg img (3).jpg" alt="4"></a>
-                <div class="artname">NFT 3</div>
+            <div  class="nft-card four"><a href="nft3.html"><img src="assets/login.page.images/bg img (3).jpg" alt="4"></a>
+                <div class="nft-title">NFT 3</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -138,8 +142,8 @@
 
                 </div>
             </div>
-            <div class="five"><a href="art4.html"><img src="assets/login.page.images/img 3.jpeg" alt="5"></a>
-                <div class="artname">Art 4</div>
+            <div class="nft-card five"><a href="art4.html"><img src="assets/login.page.images/img 3.jpeg" alt="5"></a>
+                <div class="nft-title">NFT 4</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -153,8 +157,8 @@
 
                 </div>
             </div>
-            <div class="six"><a href="nft4.html"><img src="assets/NFT/nft  (6).jpeg" alt="6"></a>
-                <div class="artname">NFT 4</div>
+            <div  class="nft-card six"><a href="nft4.html"><img src="assets/NFT/nft  (6).jpeg" alt="6"></a>
+                <div class="nft-title">NFT 4</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -168,8 +172,8 @@
 
                 </div>
             </div>
-            <div class="seven"><a href="nft5.html"><img src="assets/NFT/nft  (7).jpeg" alt="7"></a>
-                <div class="artname">NFT 5</div>
+            <div  class="nft-card seven"><a href="nft5.html"><img src="assets/NFT/nft  (7).jpeg" alt="7"></a>
+                <div class="nft-title">NFT 5</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -183,8 +187,8 @@
 
                 </div>
             </div>
-            <div class="eight"><a href="nft6.html"><img src="assets/NFT/nft  (8).jpeg" alt="8"></a>
-                <div class="artname">NFT 6</div>
+            <div  class="nft-card eight"><a href="nft6.html"><img src="assets/NFT/nft  (8).jpeg" alt="8"></a>
+                <div class="nft-title">NFT 6</div>
                 <div class="info">
                     <div class="price">
                         <div id="price">ETH</div>
@@ -246,6 +250,35 @@
     <script src="firebase-config.js"></script>
     <script src="home.js"></script>
     <script src="wallet.js"></script>
+  <script>
+// Simple search filter for NFT cards
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function() {
+  const filter = this.value.toLowerCase();
+  document.querySelectorAll('.nft-card').forEach(card => {
+    const title = card.querySelector('.nft-title').textContent.toLowerCase();
+    card.style.display = title.includes(filter) ? '' : 'none';
+  });
+});
+
+// Scroll to latest-drop on Enter
+searchInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    // Find the first visible nft-card
+    const visibleCard = Array.from(document.querySelectorAll('.nft-card')).find(card => card.style.display !== 'none');
+    if (visibleCard) {
+      visibleCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      visibleCard.focus && visibleCard.focus();
+    } else {
+      // If none found, scroll to latest-drop section
+      const latestDrop = document.querySelector('.latest-drop');
+      if (latestDrop) {
+        latestDrop.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+});
+</script>
 
 
 
