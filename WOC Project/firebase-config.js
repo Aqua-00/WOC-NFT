@@ -1,10 +1,10 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyCZkJNe0GCCljW30u1kOxiYbOvnevokIkM",
-    authDomain: "woc-project-f77cd.firebaseapp.com",
-    projectId: "woc-project-f77cd",
-    storageBucket: "woc-project-f77cd.appspot.com",
-    messagingSenderId: "284229881737",
-    appId: "1:284229881737:web:1c226741beda72b2a09b58"
+const firebaseConfig = {
+  apiKey: "AIzaSyDUrW9lxIA-8l_uxxQEMwxHSOr5sXHTyT4",
+  authDomain: "nft-marketplace-4eaa7.firebaseapp.com",
+  projectId: "nft-marketplace-4eaa7",
+  storageBucket: "nft-marketplace-4eaa7.firebasestorage.app",
+  messagingSenderId: "746584081720",
+  appId: "1:746584081720:web:e3b85476f9e6317d666dcd"
 };
 
 // Initialize Firebase
