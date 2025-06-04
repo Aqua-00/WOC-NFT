@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 72px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    top: 0px;
+    position: sticky;
+    z-index: 200;
+    color: antiquewhite;
+    display: flex;
+    flex-flow: row;
+
+}
+
+
+.logo {
+    align-self: center;
+    padding: 10px;
+}
+
+nav .name {
+    font-weight: 900;
+    align-self: center;
+    font-size: x-large;
+}
+
+.sign-out{
+    padding: 7px;
+ 
+    margin: 10px;
+    position: relative;
+   
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Poppins;
+    font-weight: bolder;
+    color: white;
+    font-weight: 1000;
+    outline: none;
+    background-color: rgba(58, 86, 106, 0.918);
+
+
+   
+}
+.button{
+    position: absolute;
+    right: 20px;
+    align-self: center;
+}
+.sign-out:hover{
+    background-color: rgb(57, 66, 66);
+}
+
+
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(109, 240, 255);
+
+}
+h2{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 3vh;
+    padding: 10px;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin: 10px;
+    border-radius: 10px;
+}
+.profile img{
+    grid-column: 1/2;
+    width: 222px;
+    padding: 5px;
+   border-radius: 10px;
+}
+#container {
+    width: max-content;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: rgb(24, 22, 22);
+    color: white;
+    border-radius: 20px;
+  }
+
+  #inputBox {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  #displayNum {
+    margin-top: 10px;
+    font-size: 20px;
+    color: green;
+  }
+
+
+  #error {
+    margin-top: 10px;
+    font-size: 16px;
+    color: red;
+  }
+  #container button{
+    padding: 3px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgba(128, 255, 0, 0.551);
+  }
+  .NFT-history{
+    display: grid;
+  }
+table{
+    border-radius: 15px;
+    background-color: rgb(24, 22, 22);
+    margin: 15px;
+    display: flex;
+    padding: 20px;
+    grid-column: 2/3;
+    color: white;
+}
+td, th{
+    padding: 5px 40px;
+}
